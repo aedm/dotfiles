@@ -18,11 +18,8 @@ sh $SCRIPT_FILE
 
 # Install oh-my-fish
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > omf-install
-fish omf-install --noninteractive -y --path=~/.local/share/omf --config=~/.dotfiles/config/omf
+fish omf-install --noninteractive -y --config=~/.dotfiles/config/omf
 rm omf-install
-
-# Install the bobthefish theme
-echo "omf install bobthefish" | fish
 
 # Set fish shell as default shell
 FISH=`which fish`

@@ -1,0 +1,4 @@
+function jbkill --wraps=ps\\\ aux\\\ \\\|\\\ grep\\\ \\\'\\\[jJ\\\]et\\\[bB\\\]rains\\\'\\\ \\\|\\\ grep\\\ -v\\\ \\\'grep\\\'\\\ \\\|\\\ awk\\\ \\\'\\\{print\\\ \\\$2\\\}\\\'\\\ \\\|\\\ xa --wraps=ps\\\\\ aux\\\\\ \\\\\|\\\\\ grep\\\\\ \\\\\'\\\\\[jJ\\\\\]et\\\\\[bB\\\\\]rains\\\\\'\\\\\ \\\\\|\\\\\ grep\\\\\ -v\\\\\ \\\\\'grep\\\\\'\\\\\ \\\\\|\\\\\ awk\\\\\ \\\\\'\\\\\{print\\\\\ \\\$2\\\\\}\\\\\'\\\\\ \\\\\|\\\\\ xargs\\\\\ kill\\\\\ -9 --wraps=ps\ aux\ \|\ grep\ \'\[jJ\]et\[bB\]rains\'\ \|\ grep\ -v\ \'grep\'\ \|\ awk\ \'\{print\ \}\'\ \|\ xargs\ kill\ -9 --description alias\ jbkill\ ps\ aux\ \|\ grep\ \'\[jJ\]et\[bB\]rains\'\ \|\ grep\ -v\ \'grep\'\ \|\ awk\ \'\{print\ \}\'\ \|\ xargs\ kill\ -9
+  ps aux | grep '[jJ]et[bB]rains' | grep -v 'grep' | awk '{print }' | xargs kill -9 $argv
+        
+end
