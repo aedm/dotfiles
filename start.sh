@@ -1,8 +1,3 @@
-if [ "$(id -u)" != "0" ]; then
-    echo "This script must be run as root or with sudo."
-    exit 1
-fi
-
 # Set up config symlinks
 mkdir ~/.config
 ln -s ~/.dotfiles/config/fish ~/.config/fish
@@ -23,6 +18,6 @@ rm omf-install
 
 # Set fish shell as default shell
 FISH=`which fish`
-echo $FISH | tee -a /etc/shells
+echo $FISH | sudo tee -a /etc/shells
 chsh -s $FISH
 fish
