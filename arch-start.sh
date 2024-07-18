@@ -18,3 +18,9 @@ cargo install rua
 
 # Install Python 3.10
 # rua install python310
+
+# Install Node.js LTS
+# sudo pacman -S nodejs-lts-iron npm
+
+# Install JDK-17
+# sudo pacman -S jdk17-openjdk gradle
