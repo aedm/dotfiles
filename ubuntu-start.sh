@@ -10,8 +10,7 @@ cargo install starship bat fd-find
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
 eval "$(starship init bash)"
 
-starship preset gruvbox-rainbow -o ~/.config/starship.toml
-#starship preset pastel-powerline -o ~/.config/starship.toml
+cp starship.toml ~/.config/
 
 # Java 17
 # sudo apt-get install openjdk-17-jdk
@@ -20,5 +19,5 @@ starship preset gruvbox-rainbow -o ~/.config/starship.toml
 # sudo apt install software-properties-common
 # sudo add-apt-repository ppa:deadsnakes/ppa
 # sudo apt update
-# sudo apt install python3.10 python3-pip python3.10-venv
+# sudo apt install python3.10 python3-pip python3.10-venv python3.10-dev
 
