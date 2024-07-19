@@ -26,7 +26,8 @@ $docker_context\
 $conda\
 [](fg:color_bg3 bg:color_bg1)\
 $time\
-[ ](fg:color_bg1)\
+$cmd_duration\
+[ ](fg:color_bg1)\
 $line_break$character"""
 
 palette = 'gruvbox_dark'
@@ -161,7 +162,13 @@ format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
 disabled = false
 time_format = "%R"
 style = "bg:color_bg1"
-format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+format = '[[   $time ](fg:color_fg0 bg:color_bg1)]($style)'
+
+[cmd_duration]
+show_milliseconds = true
+style = "bg:color_bg1"
+format = "[[ [took](fg:color_bg3 bg:color_bg1) $duration ](fg:color_fg0 bg:color_bg1)]($style)"
+min_time = 500
 
 [line_break]
 disabled = false
