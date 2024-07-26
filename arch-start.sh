@@ -24,3 +24,8 @@ cargo install rua
 
 # Install JDK-17
 # sudo pacman -S jdk17-openjdk gradle
+
+# Install Docker
+# sudo pacman -S docker docker-compose
+# sudo systemctl enable docker
+# sudo usermod -aG docker aedm
