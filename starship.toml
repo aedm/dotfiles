@@ -1,11 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_user)\
+[](color_orange)\
 $os\
 $username\
-[](bg:color_orange fg:color_user)\
-$hostname\
 [](bg:color_yellow fg:color_orange)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
@@ -28,6 +26,7 @@ $conda\
 $time\
 $cmd_duration\
 [ ](fg:color_bg1)\
+$hostname\
 $line_break$character"""
 
 palette = 'gruvbox_dark'
@@ -43,11 +42,11 @@ color_orange = '#d65d0e'
 color_purple = '#b16286'
 color_red = '#cc241d'
 color_yellow = '#d79921'
-color_user = '#bada55'
+color_host = '#7a7a85'
 
 [os]
 disabled = false
-style = "bg:color_user fg:black"
+style = "bg:color_orange fg:color_fg0"
 
 [os.symbols]
 Windows = "󰍲"
@@ -63,8 +62,9 @@ Fedora = "󰣛"
 Alpine = ""
 Amazon = ""
 Android = ""
-Arch = "󰣇"
+Arch = ""
 Artix = "󰣇"
+EndeavourOS = ""
 CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
@@ -72,14 +72,14 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:color_user fg:black"
-style_root = "bg:color_red fg:color_fg0"
+style_user = "bg:color_orange fg:color_fg0"
+style_root = "bg:color_orange fg:color_fg0"
 format = '[ $user ]($style)'
 
 [hostname]
 ssh_only = true
 ssh_symbol = " @"
-style = "bg:color_orange fg:white"
+style = "bg:black fg:#777777"
 format = '[$ssh_symbol$hostname ]($style)'
 
 [directory]
