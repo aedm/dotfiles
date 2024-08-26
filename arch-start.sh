@@ -9,6 +9,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Set up starship
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
+mkdir ~/.config/
 cp starship.toml ~/.config/
 
 echo 'alias ll="exa -alF --group-directories-first --git"' >> ~/.bashrc
