@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install basics
-sudo pacman -Sy --noconfirm which curl eza htop fd neofetch starship bat bubblewrap-suid base-devel
+sudo pacman -Sy --noconfirm which curl eza htop fd neofetch starship bat bubblewrap-suid base-devel vim
 
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -17,6 +17,9 @@ echo 'alias ll="exa -alF --group-directories-first --git"' >> ~/.bashrc
 # Install Rua
 cargo install rua
 
+# Vim as vi
+# rua install vi-vim-symlink
+
 # Install Python 3.10
 # rua install python310
 
@@ -30,3 +33,12 @@ cargo install rua
 # sudo pacman -S docker docker-compose
 # sudo systemctl enable docker
 # sudo usermod -aG docker aedm
+
+# Install shellgpt
+# sudo pacman -S pipx
+# pipx install sgpt
+# pipx ensurepath
+# echo 'alias s="sgpt --shell"' >> ~/.bashrc
+
+# etc
+# echo 'alias dps="docker ps --format \"table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}\t{{.Ports}}\""' >> ~/.bashrc
