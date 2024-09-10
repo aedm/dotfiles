@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install basics
-sudo pacman -Sy --noconfirm which curl eza htop fd neofetch starship bat bubblewrap-suid base-devel vim
+sudo pacman -Sy --noconfirm which curl eza htop fd neofetch starship bat bubblewrap-suid base-devel vim net-tools
 
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
